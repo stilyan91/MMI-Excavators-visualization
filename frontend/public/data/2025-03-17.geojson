@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "tr3-dobiv-package — r3-dobiv-03-2025 — 2025-03-17",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "id": null, "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "LineString", "coordinates": [ [ 26.048785020699999, 42.192240734899997, 105.82 ], [ 26.050089336399999, 42.179724401500003, 100.0 ] ] } }
+]
+}

@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "tr3-dobiv-package — r3-dobiv-03-2025 — 2020-09-30",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "id": null, "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 26.034501372600001, 42.192153919299997, 109.599 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "id": null, "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": "clampToGround", "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 26.048020739599998, 42.165316325100001, 95.23 ] } }
+]
+}
