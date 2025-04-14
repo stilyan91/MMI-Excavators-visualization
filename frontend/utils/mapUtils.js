@@ -44,3 +44,12 @@ export async function zoomToAllLayers(map, geojsonLayers) {
         console.warn('No coordinates found in any GeoJson layer');
     }
 }
+
+
+export function convertToDecimalDegrees(degree, minutes) {
+    const d = parseFloat(degree)
+    const m = parseFloat(minutes)
+    if (isNaN(d) || isNaN(m)) return null;
+
+    return d + m / 60;
+}

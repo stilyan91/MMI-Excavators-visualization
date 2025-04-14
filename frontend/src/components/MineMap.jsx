@@ -2,13 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-import geojsonLayers from '../config/layersConfig';
-import { zoomToAllLayers } from '../utils/mapUtils';
+import geojsonLayers from '../../config/layersConfig';
+import { convertToDecimalDegrees, zoomToAllLayers } from '../../utils/mapUtils';
+
+import LiveExcavatorPoint from './LiveExcavatorLocation';
+import CoordinateBox from './CoordinateBox';
 
 
 
 const MineMap = () => {
     const mapContainerRef = useRef(null);
+    const mapRef = useRef(null);
     const [coords, setCoords] = useState({ lng: 26.0, lat: 42.0 });
 
     useEffect(() => {
@@ -27,6 +31,12 @@ const MineMap = () => {
             },
             center: [26.0, 42.0],
             zoom: 13
+        });
+
+        mapRef.current = map;
+
+        map.on('mousemove', e => {
+            setCoords({ lng: e.lngLat.lng, lat: e.lngLat.lat });
         });
 
         map.on('load', async () => {
@@ -72,21 +82,15 @@ const MineMap = () => {
     return (
         <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
             <div ref={mapContainerRef} style={{ width: '100%', height: '100%' }} />
+            <CoordinateBox lng={coords.lng} lat={coords.lat} />
 
-            {/* Floating coordinate box */}
-            <div style={{
-                position: 'absolute',
-                bottom: 10,
-                left: 10,
-                background: 'rgba(255, 255, 255, 0.85)',
-                padding: '6px 10px',
-                fontSize: '14px',
-                borderRadius: '4px',
-                fontFamily: 'monospace',
-                boxShadow: '0 0 4px rgba(0,0,0,0.3)'
-            }}>
-                🧭 {coords.lng}, {coords.lat}
-            </div>
+            {mapRef.current && (
+                <LiveExcavatorPoint
+                    map={mapRef.current}
+                    latitude={convertToDecimalDegrees(42, 9.5457)}
+                    longitude={convertToDecimalDegrees(26, 2.4988)}
+                />
+            )}
         </div>
     );
 };
