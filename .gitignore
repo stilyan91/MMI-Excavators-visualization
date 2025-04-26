@@ -1,7 +1,13 @@
 myvenv/
 backend/backend/__pycache__/
 frontend/node_modules
+backend/backend/.env
+backend/server/__pycache__/
+backend/server/migrations/__pycache__/
 
+backend/backend/.env
+backend/server/__pycache__/
+backend/server/migrations/__pycache__/
 
 dobiv-03-2025.dwg
 r3-dobiv-03-2025.kml
