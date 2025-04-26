@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'server',
     'rest_framework',
     'rest_framework.authtoken',
+    'gpsdata',
     
 ]
 
