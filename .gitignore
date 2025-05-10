@@ -14,5 +14,6 @@ r3-dobiv-03-2025.kml
 Data_from_GPS/
 
 backend/gpsdata/__pycache__/
+backend/gpsdata/migrations/__pycache__/
 backend/gpsdata/management/__pycache__/
 backend/gpsdata/management/commands/__pycache__/

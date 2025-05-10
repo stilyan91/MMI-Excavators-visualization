@@ -1,0 +1,28 @@
+/* Styles for ExcavatorData component */
+.excavator-data {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.excavator {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.excavator h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.excavator ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.excavator li {
+    margin: 5px 0;
+    font-size: 14px;
+}
